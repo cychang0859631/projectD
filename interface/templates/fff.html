@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display:none;
+        }
+    </style>
+    <script>
+        function toggleMenu(){
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("hide");
+            
+        }
+    </script>
+</head>
+<body>
+    <div onclick="toggleMenu();">選單標題</div>
+    <ul id="menu" class="hide">
+        <li>項目一</li>
+        <li>項目二</li>
+    </ul>
+</body>
+</html>

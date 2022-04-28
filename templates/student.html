@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_css.css') }}">
+{% block head %}
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+    </style>
+    <script type="text/javascript">
+        function populate(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            s2.innerHTML = "";
+            if(s1.value == "6"){
+                var optionArray = ["|","光電工程學系|光電工程學系","電機工程學系|電機工程學系","電子工程學系|電子工程學系"];
+            } else if(s1.value == "3"){
+                var optionArray = ["|","生物科技學系|生物科技學系"];
+            } else if(s1.value == "5"){
+                var optionArray = ["|","資訊工程學系|資訊工程學系"];
+            } else if(s1.value == "1"){
+                var optionArray = ["|","土木工程學系|土木工程學系","材料科學與工程學系|材料科學與工程學系","應用數學系|應用數學系","機械工程學系|機械工程學系"];
+            } else if(s1.value == "2"){
+                var optionArray = ["|","電子物理學系|電子物理學系","應用化學系|應用化學系","奈米科學及工程學士學位學程|奈米科學及工程學士學位學程"];
+            } else if(s1.value == "4"){
+                var optionArray = ["|","工業工程與管理學系|工業工程與管理學系","資訊管理與財務金融學系|資訊管理與財務金融學系","運輸與物流管理學系|運輸與物流管理學系","管理科學系|管理科學系"];
+            } else if(s1.value == "0"){
+                var optionArray = ["|","外國語文學系|外國語文學系"];
+            }
+            else if(s1.value == "7"){
+                var optionArray = ["|","人文社會學系|人文社會學系","傳播與科技學系|傳播與科技學系"];
+            }
+            for(var option in optionArray){
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+    </script>
+{% endblock %}
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">職涯探索</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">
+            {% block main %}       
+                <form method="post" action={{ url_for('student') }}>
+                    <h2>職涯探索</h2>
+                    <p>請輸入您的基本資料，我們會依據您的基本特徵來提供適合您的職涯協助!</p>
+                    <h3>個人資料</h3>
+                    編號<input type="text" name="stid" value="" required="required"><br>
+                    性別
+                    <select required name="sex">
+                        <option value="1">男</option>
+                    　  <option value="2">女</option>
+                    </select><br>
+                    入學管道
+                    <select required name="ac">
+                        <option value="0">考試入學</option>
+                    　  <option value="1">個人申請</option>
+                        <option value="2">繁星入學</option>
+                    </select><br>
+                    學院
+                    <select required id="col" name="col" onchange="populate(this.id,'dep')">
+                        <option value=""></option>
+                        <option value="6">電機學院</option>
+                        <option value="3">生物科技學院</option>
+                    　  <option value="5">資訊學院</option>
+                        <option value="1">工學院</option>
+                    　  <option value="2">理學院</option>
+                        <option value="4">管理學院</option>
+                        <option value="0">人文社會學院</option>
+                        <option value="7">客家文化學院</option>
+                    </select><br>
+                    學系
+                    <select required name="dep" id="dep">
+                    </select><br>
+                    學測數學成績<input type="number" name="mathscore" value="10" min="0" max="15" required="required"><br>
+                    <div class="enter">
+                        <input type = "submit">
+                    </div>  
+                </form>
+            {% endblock %}
+            </div>
+        <div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+</body>
+</html>

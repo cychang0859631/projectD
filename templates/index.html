@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_css.css') }}">
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .con{
+            //height:700px;
+        }
+        .box{
+            width:700px;
+            //height:250px;
+            //background-color:#ffffff;
+            margin:auto;
+            //border:1px solid;
+            //border-color:#c0c0c0;
+        }
+        .sub{
+            margin:40px 0px 40px 0px;
+        }
+        .subbox{
+            margin:20px 0px 20px 0px;
+            display:flex;
+        }
+        .subbox1{
+            height:150px;
+            width:150px;
+            background-color:#c0c0c0;
+        }
+        .subbox2{
+            height:150px;
+            width:600px;
+            border:1px solid;
+            border-color:#c0c0c0;
+        }
+        .subcenter{
+            padding-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="{{ url_for('student') }}">職涯探索</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">
+                <div class="sub">
+                    <div class="box">         
+                        <center><h2>系統目的</h2></center>
+                        <p>　　職涯規劃是每個大學畢業生重要的階段，通常可以分為兩種類型發展，就業導向或是升學導向，過去傳統的職涯諮詢礙於人力與時間因素，提供給學生的效益有限，因此本系統基於學生的個人特徵建立了一個能夠在學生的職涯規劃提供協助的學習系統，希望能夠給予對未來職涯發展困惑的學生一些建議。</p>
+                    </div>
+                </div>
+                <div class="sub">
+                    <div class="box">         
+                        <center><h2>系統功能</h2></center>
+                        <div class="subbox">
+                            <div class="subbox1">
+                                <div class="subcenter">
+                                    <center><h3>推薦課程</h3></center>
+                                </div>
+                            </div>
+                            <div class="subbox2">
+                                <p>
+                                    　　在推薦課程中學生可以依循我們提供的欄位輸入關於他們的基本資料，並經過系統內部推薦引擎找尋過去特徵相似的學生在校內修習的課程，提供學生作為參考。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="subbox">
+                            <div class="subbox1">
+                                <div class="subcenter">
+                                    <center><h3>就業相關</h3></center>
+                                </div>
+                            </div>
+                            <div class="subbox2">
+                                <p>
+                                    　　在就業相關這個功能中，學生能夠依據個人所屬的學院、系所探索自己未來就業發展的走向，像是未來的職業選擇，以及各職業的就業市場上的行情，並提供一些在面試時須注意的細節。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="subbox">
+                            <div class="subbox1">
+                                <div class="subcenter">
+                                    <center><h3>升學相關</h3></center>
+                                </div>
+                            </div>
+                            <div class="subbox2">
+                                <p>
+                                    　　在升學相關這個功能中，介紹各領域研究發展，推薦在台灣內相關領域的研究所，提供碩博士班入學相關資訊。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="subbox">
+                            <div class="subbox1">
+                                <div class="subcenter">
+                                    <center><h3>職涯諮詢</h3></center>
+                                </div>
+                            </div>
+                            <div class="subbox2">
+                                <p>
+                                    　　若是您還有其他職涯發展相關的疑問，可以寫信聯繫我們，我們將會盡快為您提供協助。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+</body>
+</html>

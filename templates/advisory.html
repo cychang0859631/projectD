@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_css.css') }}">
+    <style>
+        table{
+            margin-bottom:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            //margin:20px 40px 20px 40px;
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:left;
+        }
+        .enter input[type=button]{
+            background-color: #353866;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            alert("已送出，將會盡快聯絡您!");
+            window.location.reload();
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">職涯探索</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">
+                <h2>聯絡我們</h2>
+                <br>
+                <p>如果還有任何職涯發展相關的問題歡迎聯絡我們，我們會給你協助</p>
+                
+                <form method="post" action={{ url_for('student') }}>
+                    <p>姓名</p>
+                    <input type="text" name="name">
+                    <p>電子信箱</p>
+                    <input type="text" name="email">
+                    <p>電話</p>
+                    <input type="text" name="phone">
+                    <p>寫下自己對於未來職涯規劃的疑問</p>
+                    <textarea cols="50" rows="8"></textarea>
+                    <div class="enter">
+                        <input type="button" value="送出" onclick="myFunction()">
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        
+        table{
+            margin-bottom:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:20px 40px 20px 40px;
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:left;
+        }
+        .con a{
+            display:inline-block;
+            margin-top:10px;
+            margin-bottom:10px;
+            padding:10px 20px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .con p{
+            padding:0;
+            margin:0;
+        }
+        table{
+            border: 1px solid #000; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="pic.html">分析圖表</a>
+            <ul>
+                <li><a href="sa1.html">學術導向總覽</a></li>
+                <li><a href="sa2.html">特徵識別</a></li>
+                <li><a href="sa3.html">預測分佈比較</a></li>
+                <li><a href="sa4.html">潛在博士班學生</a></li>
+            </ul></li>
+            <li><a href="course.html">課程資訊</a></li>
+            <li><a href="decision.html">決策建議</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">
+                <center><h2>電機學院(EE)潛在博士班學生</h2></center>
+                <center><p>以下預測結果是依據多個預測模型中具有最高準確率的模型來產生，僅供參考!</p></center>
+                <center><p>信心分數指的100個相似特徵的樣本又多少樣本實際符合預測目標，愈近100%表示可能性愈高</p></center>
+                <div style="margin:20px 10px; text-align:right;">
+                    Search<input type="text" name="search">
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">SID</th>
+                            <th scope="col">入學管道</th>
+                            <th scope="col">院排名(PR)</th>
+                            <th scope="col">信心分數</th>
+                            <th scope="col">性別</th>
+                            <th scope="col">導師/指導教師</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>103***112</td>
+                            <td>AE</td>
+                            <td>95</td>
+                            <td>87%</td>
+                            <td>Male</td>
+                            <td>A***120</td>
+                        </tr>
+                        <tr>
+                            <td>103***214</td>
+                            <td>AE</td>
+                            <td>98</td>
+                            <td>76%</td>
+                            <td>Male</td>
+                            <td>T***111</td>
+                        </tr>
+                        <tr>
+                            <td>104***091</td>
+                            <td>AE</td>
+                            <td>80</td>
+                            <td>81%</td>
+                            <td>Male</td>
+                            <td>A***003</td>
+                        </tr>
+                        <tr>
+                            <td>101***205</td>
+                            <td>PA</td>
+                            <td>92</td>
+                            <td>79%</td>
+                            <td>Female</td>
+                            <td>A***110</td>
+                        </tr>
+                        <tr>
+                            <td>101***394</td>
+                            <td>PA</td>
+                            <td>92</td>
+                            <td>69%</td>
+                            <td>Male</td>
+                            <td>A***041</td>
+                        </tr>
+                        <tr>
+                            <td>102***983</td>
+                            <td>AE</td>
+                            <td>95</td>
+                            <td>73%</td>
+                            <td>Male</td>
+                            <td>A***089</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

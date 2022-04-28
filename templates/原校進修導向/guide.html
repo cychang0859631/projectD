@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_css.css') }}">
+{% block head %}
+    <style>
+        
+        .t {
+            border: 1px solid #333;
+            width:800px;
+            margin-top:20px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:center;
+            height:50px;
+            
+        }
+        .ta{
+            margin:30px 0px 30px 0px;
+        }
+        ul {margin-left: 0; padding-left: 20px;}
+        .enter input[type=button]{
+            background-color: #353866;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .enter{
+            display:inline;
+            //margin-top:60px;
+            //text-align:center;
+        }
+    </style>
+{% endblock %}
+
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">職涯探索</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="{{ url_for('ao1') }}">探索結果說明</a></li>
+                <li><a href="{{ url_for('ao2') }}">學術領域介紹</a></li>
+                <li><a href="{{ url_for('ao3') }}">研究所推薦</a></li>
+                <li><a href="{{ url_for('ao4') }}">升學管道</a></li>
+                <li><a href="{{ url_for('ao5') }}">課程推薦</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+            {% block main %}     
+                <h2>探索結果說明</h2>
+                <p>依據您的職涯傾向，我們提供了一些資訊，希望能夠給予您在職涯規劃上的協助，詳細內容請參考下方資訊。</p>
+                <br>
+                <div class="enter">
+                    <a href="{{ url_for('ao2') }}">學術領域介紹</a>
+                </div>
+                <div class="enter">
+                    <a href="{{ url_for('ao3') }}">研究所推薦</a>
+                </div>
+                <div class="enter">
+                    <a href="{{ url_for('ao4') }}">升學管道</a>
+                </div>
+                <div class="enter">
+                    <a href="{{ url_for('ao5') }}">課程推薦</a>
+                </div>
+            {% endblock %}
+            </div>
+        </div>
+            
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

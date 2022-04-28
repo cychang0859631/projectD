@@ -1,0 +1,90 @@
+{% extends "student.html" %}
+{% block head %}
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+    <script type="text/javascript">
+        function other_click(src) {
+            var hide=document.getElementById("hide1");
+            hide.style.display="block";
+            if (src.value =="其他") {
+                hide.style.display="block";}
+            else{
+                hide.style.display="none";
+            
+            }
+        }
+    </script>
+{% endblock %}
+{% block main %} 
+                <h2>閱讀媒體2</h2>
+                <p>請閱讀下列新聞媒體片段，並在閱讀完後回答問題</p>
+                <br>
+                <h3>陽明交大增設產創研究學院 這3所頂大也在拚</h3>
+                <p>「國家重點領域產學合作及人才培育創新條例」日前經立法院三讀通過，多所頂大皆傳出有意申請。教育部昨審議通過，國立陽明交通大學將設立全台第一所產學創新研究學院，下設「前瞻半導體研究所」和「智能系統研究所」，預計110學年度開始招生，將與台積電、聯發科技等七大高科技企業，以產學共創模式，培育下世代半導體高階研發人才。
+
+教育部表示，目前陸續已有國立陽明交通大學、國立成功大學、國立清華大學、國立台灣大學等校完成校內程序，提送創新計畫書至教育部，依創新條例組成審議會，並逐案審議中，獲審議通過學校，後續即得依規畫期程辦理招生等相關事宜。
+
+陽明交大成為全台第一所通過審議的學校，陽明交大校長林奇宏表示，過去產學合作的概念是企業出資、學界提供人才，雙方沒有連結，執行後發現學用產生落差，運作模式也有許多系統上的限制，而產學共創的精神，是重新規範與產業互動的方式，如同醫療領域中「教學訓用」一條鞭的概念，有效使用業界人力進入人才培育的循環中。
+
+陽明交大產學創新研究學院將於110學年度開始招生，採一院多所模式，下設前瞻半導體研究所和智能系統研究所。
+
+其中「前瞻半導體研究所」將擴大培育具前瞻設計、製程、封裝、材料系統性之產業高階人才，每年招收碩士班學生60名、博士班學生15名；「智能系統研究所」以培育跨重點領域整合專精人才為宗旨，協助推動國家產業升級，每年招收碩士班學生40名、博士班學生10名。
+
+陽明交大副校長陳永富說，過去交通大學以電子領域起家，協助國家建立半導體製程與IC設計護國神山。科技發展日新月異，陽明交大也持續升級，建立全新產學共創模式，萬眾齊心讓護國神山更穩定。
+
+台灣大學上月也召開校務會議，擬依此條例設立「國立台灣大學重點科技研究學院」，根據台大規畫，將和台積電、力積電、聯發科、鈺創科技等企業合作，培養半導體人才，校務會議中也照案通過，將向教育部提出申請；成功大學也指出，日前已通過校務會議，正在草擬計畫，準備送審，但屬競爭型計畫，細節不便對外透露。</p>
+                <br>
+                <hr>
+                <br>
+                <h3>新聞2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime, quas repellat reprehenderit possimus doloribus adipisci aut dignissimos amet ullam nulla, nisi nostrum enim iusto? Natus facere doloremque ducimus consequuntur adipisci error blanditiis ex incidunt voluptas, ipsum dicta similique, voluptate delectus vitae nobis! Voluptates, perferendis quod repellat suscipit itaque labore?</p>
+                <br>
+                <hr>
+                <br>
+                <h3>新聞3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime, quas repellat reprehenderit possimus doloribus adipisci aut dignissimos amet ullam nulla, nisi nostrum enim iusto? Natus facere doloremque ducimus consequuntur adipisci error blanditiis ex incidunt voluptas, ipsum dicta similique, voluptate delectus vitae nobis! Voluptates, perferendis quod repellat suscipit itaque labore?</p>
+                <br>
+                <hr>           
+                <form method="post" action={{ url_for('news2') }}>
+                <!--
+                    閱讀完上述的新聞片段你對於未來畢業後的職涯選擇是<br>
+                    <select id="col" name="news_career_2" onchange="other_click(this)">
+                        <option value="就業">就業</option>
+                        <option value="進修交大碩士班並有意願朝博士班發展">進修交大碩士班並有意願朝博士班發展</option>
+                        <option value="進修交大碩士班">進修交大碩士班</option>
+                    　  <option value="進修其他學校研究所">進修其他學校研究所</option>
+                        <option value="其他">其他</option>
+                    </select>-->
+                    <p>閱讀完上述的新聞片段你對於未來畢業後的職涯選擇是：</p>
+                     <input type="radio" name="news_career_2" value="就業" onchange="other_click(this)">就業<br>   
+                     <input type="radio" name="news_career_2" value="進修交大碩士班並有意願朝博士班發展" onchange="other_click(this)">進修交大碩士班並有意願朝博士班發展<br>
+                     <input type="radio" name="news_career_2" value="進修交大碩士班" onchange="other_click(this)">進修交大碩士班<br>
+                    <input type="radio" name="news_career_2" value="進修其他學校研究所" onchange="other_click(this)">進修其他學校研究所<br>
+                    <input type="radio" name="news_career_2" value="其他" onchange="other_click(this)">其他
+                    <br><br>
+                    <div class="hide" id="hide1">
+                        <p>若上述結果都不符合的話，您畢業後的職涯選擇是?</p>
+                        <textarea cols="50" rows="8" name="news_other_2"></textarea>
+                    </div>
+                    <div class="enter">
+                        <input type = "submit">
+                    </div>  
+                </form>
+{% endblock %}

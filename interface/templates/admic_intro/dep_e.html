@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../my_css.css">
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+        .con{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .items{
+            height:900px;
+        }
+        .box{
+            width:245px;
+            height:245px;
+            background-color:#ffffff;
+            //margin:20px 20px 20px 20px;
+            border:1px solid;
+            border-color:#c0c0c0;
+        }
+        .bbox{
+            margin:20px 10px 20px 10px;
+            
+        }
+        .bbox a{
+            color:#000000;
+            text-decoration: none;  /* 移除超連結底線 */
+            text-align:center;
+        }
+        .boxtext{
+            padding-top:115px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="recommend.html">推薦課程</a></li>
+            <li><a href="job.html">就業相關</a></li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="channel.html">碩士班相關</a></li>
+                <li><a href="channel2.html">博士班相關</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="job.html">職業探索</a></li>
+                <li><a href="job_salary.html">薪資落點</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+                <div class="bbox">
+                    <a href="../job_intro.html">
+                        <div class="box">
+                            <div class="boxtext">
+                                <h2>電機工程學系</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bbox">
+                    <a href="../job_intro.html">
+                        <div class="box">
+                            <div class="boxtext">
+                                <h2>光電工程學系</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bbox">
+                    <a href="../job_intro.html">
+                        <div class="box">
+                            <div class="boxtext">
+                                <h2>電子工程學系</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

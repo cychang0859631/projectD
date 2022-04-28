@@ -1,0 +1,81 @@
+{% extends "就業導向/guide.html" %}
+{% block head %}
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+        .content1{
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            margin-top:20px;
+        }
+        .content1 li{
+            padding:5px 0px 5px 0px;
+        }
+        .content2{
+            margin-top:20px;
+        }
+        .content2 li{
+            padding:5px 0px 5px 0px;
+        }
+        ul {margin-left: 0; padding-left: 20px;}
+        .list ul{
+            list-style: none;
+        }
+        
+        .li_hide{
+            display:none;
+        }
+        .mouse{
+            cursor: pointer;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+                <h2>職業方向</h2>
+                <h3>應具備的技能</h3>
+                <ul class="content1">
+                    <li>問題解決能力</li>
+                    <li>批判性思考能力</li>
+                    <li>基本電路知識</li>
+                    <li>學習的熱情</li>
+                    <li>溝通技巧</li>
+                    <li>組織能力</li>
+                    <li>數學能力</li>
+                    <li>創造性思考能力</li>
+                    <li>問題解決能力</li>
+                    <li>問題解決能力</li>
+                </ul>
+                <hr>
+                <h3>服務產業及薪資</h3>
+                <img src="{{ image }}"/>
+                <img src="{{ image1 }}"/>
+                <hr>
+                <h3>相關職業選擇</h3>
+                <ul class="content1">
+                    <li>軟體工程師</li>
+                    <li>通訊軟體工程師</li>
+                    <li>軟／韌體測試人員</li>
+                    <li>演算法開發工程師</li>
+                    <li>半導體製程工程師</li>
+                    <li>光電工程師</li>
+                    <li>電子工程師</li>
+                    <li>IC佈局工程師</li>
+                    <li>CIM工程師</li>
+                    <li>RF通訊工程師</li>
+                </ul>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "student.html" %}
+{% block head %}
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+    <script type="text/javascript">
+        function other_click(src) {
+            var hide=document.getElementById("hide1");
+            hide.style.display="block";
+            if (src.value =="其他") {
+                hide.style.display="block";}
+            else{
+                hide.style.display="none";
+            
+            }
+        }
+    </script>
+{% endblock %}
+{% block main %} 
+                <h2>閱讀媒體1</h2>
+                <p>請閱讀下列新聞媒體片段，並在閱讀完後回答問題</p>
+                <br>
+                <h3>畢業生就業獎勵 今年將續發</h3>
+                <p>疫情遇上畢業季，今年畢業生面臨勞動市場情勢恐更慘烈，勞動部今年擬續辦「青年就業獎勵計畫」，針對廿九歲以下的一○九學年度應屆畢業生發給三萬元的就業獎勵金，鼓勵積極尋職；此外，對於暫時未能進入職場的畢業生，提供職業訓練補助跟學習獎勵金的「產業新尖兵」計畫也將續辦，明天正式公告。
+
+不過學者示警，認為今年疫情爆發月份比去年晚，假設三級警戒延長，恐有一波服務業倒閉潮，屆時不是畢業生不尋職，而是根本沒職缺；人力銀行則提到，去年廿至廿四歲畢業生失業率較前年下降，顯見大家有工作後就不敢放。
+
+勞動部去年為鼓勵畢業生就業，限定應屆畢業青年須於九月卅日前就業，並在同一家公司擔任全職勞工滿三個月，就先發兩萬元就獎，滿六個月再加發一萬元，合計最高三萬元。
+
+勞動部勞動力發展署長施貞仰說，今年除針對應屆畢業生續發就業獎勵外，產業新尖兵計畫也會持續推動，發給參訓補助、學習獎勵金，提高畢業生儲備技能意願。此外，勞動部也正在研擬一項新計畫，待確定會再對外宣布。
+
+文大勞動暨人力學系副教授辛炳隆表示，今年疫情在境內，不少行業被迫停業或自主休業，屆時不是畢業生不尋職，而是根本沒職缺，因此協助火力應擺在「安置」，將暫時找不到工作的畢業生導往參加職訓。
+
+文大勞動暨人力資源系教授李健鴻也認為，去年三到五月是疫情高峰，六月後解封，今年則在五月中旬疫情升溫，且尚不明朗。再者，今年以內需產業最受拖累，假設三級警戒延長，恐會有一波服務業倒閉潮，屆時將演變成失業勞工跟畢業生搶工作，社會新鮮人自然搶不過已有資歷的失業勞工。
+
+Yes123發言人楊宗斌也提到，多數畢業生嚮往進入航空業，或投入門檻較低的餐飲業、補教業、房仲業，但受疫情衝擊，航空業已到谷底，餐飲業也苦不堪言，政府雖推出獎勵，但畢業生嚮往的行業，真的開不出職缺。疫情下不少大學生也選擇延畢，或去考研究所。</p>
+                <br>
+                <hr>
+                <br>
+                <h3>新聞2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime, quas repellat reprehenderit possimus doloribus adipisci aut dignissimos amet ullam nulla, nisi nostrum enim iusto? Natus facere doloremque ducimus consequuntur adipisci error blanditiis ex incidunt voluptas, ipsum dicta similique, voluptate delectus vitae nobis! Voluptates, perferendis quod repellat suscipit itaque labore?</p>
+                <br>
+                <hr>
+                <br>
+                <h3>新聞3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maxime, quas repellat reprehenderit possimus doloribus adipisci aut dignissimos amet ullam nulla, nisi nostrum enim iusto? Natus facere doloremque ducimus consequuntur adipisci error blanditiis ex incidunt voluptas, ipsum dicta similique, voluptate delectus vitae nobis! Voluptates, perferendis quod repellat suscipit itaque labore?</p>
+                <br>
+                <hr>           
+                <form method="post" action={{ url_for('news1') }}>
+                    <!--
+                    閱讀完上述的新聞片段你對於未來畢業後的職涯選擇是<br>
+                    <select id="col" name="news_career_1" onchange="other_click(this)">
+                        <option value="就業">就業</option>
+                        <option value="進修交大碩士班並有意願朝博士班發展">進修交大碩士班並有意願朝博士班發展</option>
+                        <option value="進修交大碩士班">進修交大碩士班</option>
+                    　  <option value="進修其他學校研究所">進修其他學校研究所</option>
+                        <option value="其他">其他</option>
+                    </select>-->
+                    <p>閱讀完上述的新聞片段你對於未來畢業後的職涯選擇是：</p>
+                     <input type="radio" name="news_career_1" value="就業" onchange="other_click(this)">就業<br>   
+                     <input type="radio" name="news_career_1" value="進修交大碩士班並有意願朝博士班發展" onchange="other_click(this)">進修交大碩士班並有意願朝博士班發展<br>
+                     <input type="radio" name="news_career_1" value="進修交大碩士班" onchange="other_click(this)">進修交大碩士班<br>
+                    <input type="radio" name="news_career_1" value="進修其他學校研究所" onchange="other_click(this)">進修其他學校研究所<br>
+                    <input type="radio" name="news_career_1" value="其他" onchange="other_click(this)">其他
+                    <br><br>
+                    <div class="hide" id="hide1">
+                        <p>若上述結果都不符合的話，您畢業後的職涯選擇是?</p>
+                        <textarea cols="50" rows="8" name="news_other_1"></textarea>
+                    </div>
+                    <div class="enter">
+                        <input type = "submit" value="下一步">
+                    </div>  
+                </form>
+{% endblock %}

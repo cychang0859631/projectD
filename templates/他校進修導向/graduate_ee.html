@@ -1,0 +1,108 @@
+{% extends "他校進修導向/guide.html" %}
+{% block head %}
+    <style>
+        
+        .t {
+            border: 1px solid #333;
+            width:800px;
+            margin-top:20px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:center;
+            height:50px;
+            
+        }
+        .ta{
+            margin:30px 0px 30px 0px;
+        }
+        ul {margin-left: 0; padding-left: 20px;}
+        .enter input[type=button]{
+            background-color: #353866;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .list ul{
+            list-style: none;
+            //display:none;
+            //position:absolute;
+        }
+        .li_hide{
+            display:none;
+        }
+        .mouse{
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        function li_click() {
+            //alert("hello")
+            var li = document.getElementById("li_hide");
+            li.classList.toggle("li_hide");
+            /*
+            if (li.style.display=="none") {
+                li.style.display="block"
+            } else {
+                li.style.display="none"
+            }*/
+        }
+    </script>
+    <script>
+        function toggleMenu(){
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("thide");
+            
+        }
+    </script>
+{% endblock %}
+{% block main %}
+                <h2>電機相關領域</h2>
+                <h3>領域介紹</h3>
+                <p>學習有關電子設備、機器及系統的規劃、設計、發展、維護及監督的，包含與通訊有關的電腦及設備的設計。相關課程及資格包含：廣播電子、通訊系統、通訊設備安裝、通訊設備維護 、電腦工程等。</p>
+                <h3>研究方向</h3>
+                <ul>
+                    <li>奈米電子與積體電路
+                        <ul>
+                            <li>奈米電子</li>
+                            <li>量子與奈米光電元件</li>
+                            <li>VLSI及系統晶片</li>
+                            <li>積體電路設計電子設計自動化</li>
+                        </ul></li>
+                    <li>智慧系統/生醫
+                        <ul>
+                            <li>生醫電子</li>
+                            <li>生醫光電</li>
+                            <li>感測元件與系統</li>
+                            <li>智慧型機器人</li>
+                            <li>智慧型系統</li>
+                            <li>綠能科技</li>
+                        </ul>
+                    </li>
+                    <li>通訊
+                        <ul>
+                            <li>通訊系統</li>
+                            <li>微波電路與天線</li>
+                            <li>多媒體訊號處理</li>
+                            <li>網路與雲端系統</li>
+                        </ul>
+                    </li>
+                    <li>光電與顯示
+                        <ul>
+                            <li>光電系統</li>
+                            <li>光纖通訊</li>
+                            <li>光電顯示</li>
+                            <li>奈米/能源光電</li>
+                            <li>跨領域光電科學</li>
+                        </ul>
+                    </li>
+                </ul>
+{% endblock %}

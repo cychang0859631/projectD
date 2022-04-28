@@ -1,0 +1,168 @@
+{% extends "學術導向/guide.html" %}
+{% block head %}
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+            //width:500px;
+            
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:center;
+            
+        }
+        .content1{
+            margin-top:20px;
+        }
+        .content1 li{
+            padding:5px 0px 5px 0px;
+        }
+        .enter{
+            //margin-top:60px;
+            //text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .t1{
+            margin:20px 0px 40px 0px;
+        }
+        .thide{
+            display:none;
+        }
+        .mouse{
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script type="text/javascript">
+        function toggleMenu(){
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("thide");
+            
+        }
+    </script>
+{% endblock %}
+
+{% block main %}
+                <h2>研究所推薦</h2>
+                <div class="t1">
+                    <h2>電機與電子工程相關研究所</h2>
+                    <h3>國立交通大學</h3>
+                    <table class="t">
+                        <tr>
+                            <th>系所名稱</th>
+                            <th>學制</th>
+                            <th>系所網站</th>
+                        </tr>
+                        <tr>
+                            <td>電子研究所</td>
+                            <td>碩士、博士</td>
+                            <td><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td>電機工程學系碩博士班</td>
+                            <td>碩士、博士</td>
+                            <td><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td>電控工程研究所</tdwidth=>
+                            <td>碩士、博士</td>
+                            <td><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td>電信工程研究所</tdwidth=>
+                            <td>碩士、博士</td>
+                            <td><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td>光電工程學系</tdth=>
+                            <td>學士、碩士、博士</td>
+                            <td><a href="https://dop.nycu.edu.tw/ch/index.html">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td>生醫工程研究所</tdidth=>
+                            <td>碩士</td>
+                            <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td>人工智慧技術與應用碩士學位學程</td=>
+                            <td>碩士</td>
+                            <td><a href="https://aigp.ece.nycu.edu.tw/home.aspx">網站連結</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="t1">
+                    <div class="mouse"onclick="toggleMenu();">
+                        <h2>其他學校</h2>
+                    </div>
+                    <div class="thide" id="menu">
+                        <h3>國立清華大學</h3>
+                        <table class="t">
+                            <tr>
+                                <th>系所名稱</th>
+                                <th>學制</th>
+                                <th>系所網站</th>
+                            </tr>
+                            <tr>
+                                <td>電機工程學系</td>
+                                <td>碩士、博士</td>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></td>
+                            </tr>
+                            <tr>
+                                <td>電子工程研究所</td>
+                                <td>碩士、博士</td>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></td>
+                            </tr>
+                            <tr>
+                                <td>光電工程研究所</td>
+                                <td>碩士、博士</td>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></td>
+                            </tr>
+                            <tr>
+                                <td>通訊工程研究所</td>
+                                <td>碩士、博士</td>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></td>
+                            </tr>
+                        </table>
+                        <h3>國立臺灣大學</h3>
+                        <table class="t">
+                            <tr>
+                                <th>系所名稱</th>
+                                <th>學制</th>
+                                <th>系所網站</th>
+                            </tr>
+                            <tr>
+                                <td>電機工程學系</td>
+                                <td>碩士、博士</td>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></tdwidth=>
+                            </tr>
+                            <tr>
+                                <td>電子工程學研究所</td>
+                                <td>碩士、博士</td>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></tdwidth=>
+                            </tr>
+                            <tr>
+                                <td>光電工程學研究所</td>
+                                <td>碩士、博士</td>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></td=>
+                            </tr>
+                            <tr>
+                                <td>電信工程學研究所</tdwidth=>
+                                <td>碩士、博士</tdwidth=>
+                                <td><a href="https://bme.nycu.edu.tw/index.aspx?lang=c">網站連結</a></tdwidth=>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+{% endblock %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        
+        .t {
+            border: 1px solid #333;
+            margin:auto;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+        .enter input[type=button]{
+            background-color: #353866;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            alert("已送出!");
+            window.location.reload();
+        }
+    </script>
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="pic.html">分析圖表</a></li>
+            <li><a href="course.html">課程資訊</a></li>
+            <li><a href="#">決策建議</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">
+                <h2>決策建議</h2>
+                <br>
+                <p>對於學生的職涯發展規劃提供給各系所一些建議，如:增設學術導向類型課程。</p>
+                <br>
+                <form method="post" action={{ url_for('student') }}>
+                    <p>選擇要提供建議的系所</p>
+                    <select name="col">
+                        <option value="BT">生物科技學院</option>
+                    　  <option value="CS">資訊學院</option>
+                        <option value="E">工學院</option>
+                        <option value="EE">電機學院</option>
+                    　  <option value="ES">理學院</option>
+                        <option value="M">管理學院</option>
+                        <option value="SS">人文社會學院</option>
+                    </select><br>
+                    <p>輸入建議</p>
+                    <textarea cols="50" rows="8">輸入你想要寫的內容...</textarea>
+                    <div class="enter">
+                        <input type="button" value="送出" onclick="myFunction()">
+                    </div>  
+                </form>
+            </div>
+        </div>
+            
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

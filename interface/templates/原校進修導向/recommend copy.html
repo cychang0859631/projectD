@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        
+        .t {
+            border: 1px solid #333;
+            width:800px;
+            margin-top:20px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:center;
+            height:50px;
+            
+        }
+        .ta{
+            margin:30px 0px 30px 0px;
+        }
+        ul {margin-left: 0; padding-left: 20px;}
+        .enter input[type=button]{
+            background-color: #353866;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hide{
+            //display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">推薦課程</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="job_interview.html">分析結果</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">         
+                <h2>分析結果</h2>
+                <p>依據您提供的基本資料，我們找到過去與您擁有相似經驗的學生，他們在畢業後大多數選擇<span style="font-size:18px;font-weight:bold;color:#FF0000;">就業</span></p>
+                <br>
+                <form method="post" action={{ url_for('student') }}>
+                    <p>這個結果是否符合您的想法?</p>
+                    <input type="radio" name="career" value="y">是
+                    <input type="radio" name="career" value="n">否
+                    <br><br>
+                    <div class="hide">
+                        <p>若是不符合的話，下列哪一項畢業後的職涯規劃比較符合您的想法</p>
+                        <select name="othercareer">
+                            <option value="original">進修交大碩士班及博士班</option>
+                        　  <option value="other">進修交大碩士班</option>
+                            <option value="other">進修其他學校碩士班</option>
+                        </select>
+                        <br><br>
+                    </div>
+                    <p>是甚麼原因讓您做出這個選擇</p>
+                    <textarea cols="50" rows="8"></textarea>
+                    <div class="enter">
+                        <input type="button" value="送出">
+                    </div>  
+                </form>
+            </div>
+        </div>
+            
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

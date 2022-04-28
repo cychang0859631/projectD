@@ -1,0 +1,120 @@
+{% extends "student.html" %}
+{% block head %}
+    <style>
+        
+        .t {
+            border: 1px solid #333;
+            width:800px;
+            margin-top:20px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:center;
+            height:50px;
+            
+        }
+        .ta{
+            margin:30px 0px 30px 0px;
+        }
+        ul {margin-left: 0; padding-left: 20px;}
+        .enter input[type=button]{
+            background-color: #353866;
+            border: none;
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hide{
+            display:none;
+        }
+        .hide1{
+            display:none;
+        }
+    </style>
+    <script type="text/javascript">
+        function handle_click(src) {
+            var hide=document.getElementById("hide");
+            if (src.value =="y") {
+                hide.style.display="none";
+            } else {
+                hide.style.display="block";
+            }
+        }
+        function other_click(src) {
+            var hide=document.getElementById("hide1");
+            hide.style.display="block";
+            if (src.value =="other") {
+                hide.style.display="block";}
+            else{
+                hide.style.display="none";
+            
+            }
+        }
+    </script>
+{% endblock %}
+{% block main %} 
+                <h2>分析結果</h2>
+                <p>依據您提供的基本資料，我們找到過去與您擁有相似經驗的學生，他們在畢業後大多數選擇<b>{{career}}</b></p>
+                <br>
+                <form method="post" action={{ url_for('confirm') }}>
+                    <p>這個結果是否符合您的想法?</p>
+                    <input type="radio" name="career" value="y" onchange="handle_click(this)">是
+                    <input type="radio" name="career" value="n" onchange="handle_click(this)">否
+                    <br><br>
+                    <div class="hide" id="hide">
+                        <p>若是不符合的話，下列哪一項畢業後的職涯規劃比較符合您的想法</p>
+                        <select id="othercareer" name="othercareer" onchange="other_click(this)">
+                        <br>
+                        </select>
+                    </div>
+                    <div class="hide" id="hide1">
+                        <p>若上述結果都不符合的話，您畢業後的職涯選擇是?</p>
+                        <textarea cols="50" rows="8" name="other_car"></textarea>
+                        <br>
+                    </div>
+                    <p>是甚麼原因讓您做出這個選擇</p>
+                    <textarea cols="50" rows="8" name="reason"></textarea>
+                    <div class="enter">
+                        <input type = "submit">
+                    </div>  
+                </form>
+    <script type="text/javascript">
+        var test = '{{data}}';
+        if (test=="就業導向"){
+            var obj=document.getElementById("othercareer");
+            obj.options.add(new Option("進修交大碩士班並有意願朝博士班發展","original_PhD"));
+            obj.options.add(new Option("進修交大碩士班","original"));
+            obj.options.add(new Option("進修其他學校研究所","other_school"));
+            obj.options.add(new Option("其他","other"));
+        }
+        
+        else if (test=="學術導向"){
+            var obj=document.getElementById("othercareer");
+            obj.options.add(new Option("就業","employment"));
+            obj.options.add(new Option("進修交大碩士班","original"));
+            obj.options.add(new Option("進修其他學校研究所","other_school"));
+            obj.options.add(new Option("其他","other"));
+        }
+        else if (test=="本校進修"){
+            var obj=document.getElementById("othercareer");
+            obj.options.add(new Option("就業","employment"));
+            obj.options.add(new Option("進修交大碩士班並有意願朝博士班發展","original_PhD"));
+            obj.options.add(new Option("進修其他學校研究所","other_school"));
+            obj.options.add(new Option("其他","other"));
+        }
+        else if (test=="它校進修"){
+            var obj=document.getElementById("othercareer");
+            obj.options.add(new Option("就業","employment"));
+            obj.options.add(new Option("進修交大碩士班並有意願朝博士班發展","original_PhD"));
+            obj.options.add(new Option("進修交大碩士班","original"));
+            obj.options.add(new Option("其他","other"));
+        }
+    </script>
+{% endblock %}

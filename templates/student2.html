@@ -1,0 +1,45 @@
+{% extends "student.html" %}
+{% block head %}
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+    </style>
+{% endblock %}
+{% block main %} 
+                <form method="post" action={{ url_for('student2') }}>
+                    <h2>職涯探索</h2>
+                    <br>                        
+                    <h3>填表說明</h3>
+                    <p>請依據修課學年來填寫下列資料，若是在第二學年修習該課程填入第二學年微積分相關課程成績</p>
+                    <br>
+                    <h3>整體學業成績</h3>
+                    第1學年課程修課學分<input type="text" name="noncal_credit_1" value="0"><br>
+                    第1學年課程平均<input type="text" name="noncal_mean_1" value="0"><br>
+                    第1學年實得學分率<input type="text" name="ecr_1" value="0"><br><hr>
+                    第2學年課程修課學分<input type="text" name="noncal_credit_2" value="0"><br>
+                    第2學年課程平均<input type="text" name="noncal_mean_2" value="0"><br>
+                    第2學年實得學分率<input type="text" name="ecr_2" value="0"><br><hr>
+                    第3學年課程修課學分<input type="text" name="noncal_credit_3" value="0"><br>
+                    第3學年課程平均<input type="text" name="noncal_mean_3" value="0"><br>
+                    第3學年實得學分率<input type="text" name="ecr_3" value="0"><br><hr>
+                    第4學年課程修課學分<input type="text" name="noncal_credit_4" value="0"><br>
+                    第4學年非課程平均<input type="text" name="noncal_mean_4" value="0"><br>
+                    第4學年實得學分率<input type="text" name="ecr_4" value="0"><br>
+                    畢業分數<input type="text" name="gpa" value="0"><br>                    
+                    <div class="enter">
+                        <input type = "submit">
+                    </div>  
+                </form>
+{% endblock %}

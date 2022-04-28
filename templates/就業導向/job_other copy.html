@@ -1,0 +1,45 @@
+{% extends "就業導向/guide.html" %}
+{% block head %}
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+        .con li{
+            padding:5px 0px 5px 0px;
+        }
+        .list ul{
+            list-style: none;
+        }
+        
+        .li_hide{
+            display:none;
+        }
+        .mouse{
+            cursor: pointer;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+                <h2>徵才資訊</h2>
+                <p>以下提供在臺灣內徵才資訊，您可以參考以下資訊</p>
+                <h3>就業博覽會</h3>
+                <h3>徵才網站</h3>
+                <ul>
+                    <li><a href="job_salary.html">104人力銀行</a></li>
+                    <li><a href="job_salary.html">1111人力銀行</a></li>
+                    <li><a href="https://www.taiwanjobs.gov.tw/home109/index.aspx">台灣就業通</a></li>
+                </ul>        
+{% endblock %}

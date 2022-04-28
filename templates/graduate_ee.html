@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+        .con{
+            //display:flex;
+            //flex-wrap:wrap;
+        }
+        .items{
+            height:900px;
+        }
+        .box{
+            width:245px;
+            height:245px;
+            background-color:#ffffff;
+            //margin:20px 20px 20px 20px;
+            border:1px solid;
+            border-color:#c0c0c0;
+        }
+        .bbox{
+            margin:20px 10px 20px 10px;
+            
+        }
+        .bbox a{
+            color:#000000;
+            text-decoration: none;  /* 移除超連結底線 */
+            text-align:center;
+        }
+        .boxtext{
+            padding-top:115px;
+        }
+        .thide{
+            display:none;
+        }
+        .mouse{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleMenu(){
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("thide");
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">推薦課程</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="graduate.html">探索學術領域</a></li>
+                <li><a href="graduate_recom.html">研究所推薦</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+                <h2>工程及工程業學門</h2>
+                <h3>領域介紹</h3>
+                <p>包含測量、化學、材料、木工、環境、工業、礦冶、機械、生物、紡織、電機、電子、光電與通訊和核子等工程學類。</p>
+                <h3>化學工程及製程學類(<a href="#">研究所推薦</a>)</h3>
+                <p>學習在化學和物理變化發生下，規劃、設計和發展產品和製程，以及化學工廠和控制系統的設計。相關課程及資格包含：化學工程、化工製程工程、實驗室科技、汽油/瓦斯/石油化學製程、工程及機械操作製程等。</p>
+                <h3>環境保護科技(<a href="#">研究所推薦</a>)</h3>
+                <p>學習如何減少排放、浪費以及避免污染的程序。包含了水、空氣、廢棄物、土壤等控制的課程。相關課程及資格包含：空氣污染控制、生態科技、綠色科技、能源效率、環境工程、環境管理、工業排放控制及工業安全等。</p>
+                <h3>電力及能源(<a href="#">研究所推薦</a>)</h3>
+                <p>學習電路管線及相關設備的裝設、維護、修理及故障診斷，包括家用、商業用及工業用的設備，裝設及維修地面上架高以及地面下電力配線網路也包含在內。能源是研究能源發電。相關課程及資格包含：空調業、氣候工程、電器修理、電器工程、電力發電等。</p>
+                <h3>電機與電子工程(<a href="graduate_recom.html">研究所推薦</a>)</h3>
+                <p>學習有關電子設備、機器及系統的規劃、設計、發展、維護及監督的，包含與通訊有關的電腦及設備的設計。相關課程及資格包含：廣播電子、通訊系統、通訊設備安裝、通訊設備維護 、電腦工程等。</p>
+                <h3>機械工程(<a href="#">研究所推薦</a>)</h3>
+                <p>學習機器、機械工廠和系統，以及金屬產品的規劃、設計、發展、生產、維護和監督，包含設計和維護用來生產產品和服務的機器。相關課程及資格包含：槍械製造、水力學、鎖匠及保險箱修護、機械工程、機械行業等。</p>
+                <h3>其他工程及工程業(<a href="#">研究所推薦</a>)</h3>
+                <p>所有不屬於上述分類之工程及工程業學門之課程及資格。</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

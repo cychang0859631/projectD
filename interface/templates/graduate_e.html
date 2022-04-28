@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+        .con{
+            //display:flex;
+            //flex-wrap:wrap;
+        }
+        .con1{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .box{
+            width:245px;
+            height:150px;
+            background-color:#ffffff;
+            //margin:20px 20px 20px 20px;
+            border:1px solid;
+            border-color:#c0c0c0;
+        }
+        .bbox{
+            margin:20px 10px 20px 10px;
+            
+        }
+        .bbox a{
+            color:#000000;
+            text-decoration: none;  /* 移除超連結底線 */
+            text-align:center;
+        }
+        .boxtext{
+            line-height: 150px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">推薦課程</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="graduate.html">探索學術領域</a></li>
+                <li><a href="graduate_recom.html">研究所推薦</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+                <h2>工程、製造及營建</h2>
+                <h3>領域介紹</h3>
+                <p>屬於該領域之學類教導學生進行有關各類工程學、工業技藝或建築學的理論及實務之學習。</p>
+                <div class="con1">
+                    <div class="bbox">
+                        <a href="graduate_ee.html">
+                            <div class="box">
+                                <div class="boxtext">
+                                    <h2>工程及工程業學門</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bbox">
+                        <a href="jobdep/dep_cs.html">
+                            <div class="box">
+                                <div class="boxtext">
+                                    <h2>建築及營建工程學門</h2>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

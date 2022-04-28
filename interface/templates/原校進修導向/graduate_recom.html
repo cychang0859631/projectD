@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+            //width:500px;
+            
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:center;
+            
+        }
+        .content1{
+            margin-top:20px;
+        }
+        .content1 li{
+            padding:5px 0px 5px 0px;
+        }
+        .enter{
+            //margin-top:60px;
+            //text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .t1{
+            margin:20px 0px 40px 0px;
+        }
+        .thide{
+            display:none;
+        }
+        .mouse{
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script type="text/javascript">
+        function populate(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            s2.innerHTML = "";
+            if(s1.value == "ee"){
+                var optionArray = ["|","camaro|工程及工程業學門","corvette|建築及營建工程學門"];
+            } else if(s1.value == "cs"){
+                var optionArray = ["|","avenger|電腦硬體","challenger|軟體工程","charger|系統規劃"];
+            } else if(s1.value == "es"){
+                var optionArray = ["|","mustang|土木工程","shelby|化學材料"];
+            }
+            for(var option in optionArray){
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+        function test(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            s2.innerHTML = "";
+            if(s1.value == "camaro"){
+                var optionArray = ["|","dog|化學工程及製程學類","cat1|環境保護科技","cat2|電力及能源","cat3|電機與電子工程","cat4|機械工程","cat5|其他工程及工程業"];
+            } else if(s1.value == "corvette"){
+                var optionArray = ["|","triger|半導體工程師","mouse|IC設計工程師"];
+            } else if(s1.value == "impala"){
+                var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
+            }
+            for(var option in optionArray){
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+        function toggleMenu(){
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("thide");
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">推薦課程</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="job_interview.html">探索結果說明</a></li>
+                <li><a href="job_interview2.html">學術領域介紹</a></li>
+                <li><a href="job_interview3.html">研究所推薦</a></li>
+                <li><a href="job_interview3.html">升學管道</a></li>
+                <li><a href="job_interview3.html">課程推薦</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+                <h2>研究所推薦</h2>
+                <div class="t1">
+                    <h2>電機與電子工程相關研究所</h2>
+                    <table class="t">
+                        <tr>
+                            <th>學校名稱</th>
+                            <th>系所</th>
+                            <th>描述</th>
+                            <th>系所網站</th>
+                        </tr>
+                        <tr>
+                            <td width="100">國立交通大學</td>
+                            <td width="100">電子研究所</td>
+                            <td>本系運用智慧和資源，發展電子相關科技，以解決人類生活問題為目標，改善生活環境品質為職志。理念為配合國家科技與經濟發展，順應世界潮流，培養優秀電子工程領導人才，以科學「知新致遠」的態度為本，著重「崇實篤行」之工程精神。</td>
+                            <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td width="100">國立交通大學</td>
+                            <td width="100">電機工程學系碩博士班</td>
+                            <td>二十一世紀科技正朝向跨領域整合邁進，在此趨勢下，電機工程訓練除了必須在傳統的通訊、控制、半導體與資訊技術紮根外，更必須涵蓋機器人技術、生物醫學、智慧資訊等新世代科技，為達到積極培育全方位電機專業人才之教育目標，期能提升電機科技研發能力，並強化電機產業之競爭實力。</td>
+                            <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td width="100">國立交通大學</td>
+                            <td width="100">電控工程研究所</td>
+                            <td> 電控所以著重於控制理論與應用技術的研究,
+以及培育高級電機與控制工程人才為宗旨.</td>
+                            <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                        <tr>
+                            <td width="100">國立交通大學</td>
+                            <td width="100">電信工程研究所</td>
+                            <td>二十一世紀科技正朝向跨領域整合邁進，在此趨勢下，電信工程訓練除了必須在傳統的通訊、網路、電波天線與多媒體資訊技術紮根外，更必須涵蓋下世代無線寬頻技術、雲端運算、智慧資訊等新世代科技，為達到積極培育全方位電信工專業人才之教育目標，期能提升電信工科技研發能力，並強化電信工產業之競爭實力。</td>
+                            <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="t1">
+                    <div class="mouse"onclick="toggleMenu();">
+                        <h2>其他學校</h2>
+                    </div>
+                    <div class="thide" id="menu">
+                        <table class="t">
+                            <tr>
+                                <th>學校名稱</th>
+                                <th>系所名稱</th>
+                                <th>學制</th>
+                                <th>學校網址</th>
+                            </tr>
+                            <tr>
+                                <td width="100">國立清華大學</td>
+                                <td width="100">電機工程學系</td>
+                                <td>學士班、碩士班、博士班</td>
+                                <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                            </tr>
+                            <tr>
+                                <td width="100">國立清華大學</td>
+                                <td width="100">電子工程研究所</td>
+                                <td>碩士班、博士班</td>
+                                <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                            </tr>
+                            <tr>
+                                <td width="100">國立臺灣大學</td>
+                                <td width="100">電子工程學研究所</td>
+                                <td>碩士班、博士班</td>
+                                <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                            </tr>
+                            <tr>
+                                <td width="100">國立臺灣大學</td>
+                                <td width="100">光電工程學研究所</td>
+                                <td>碩士班、博士班</td>
+                                <td width="100"><a href="https://eenctu.nctu.edu.tw/tw/about/index.php">網站連結</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

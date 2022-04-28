@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        .pic{
+            margin:50px;
+        }
+        .con{
+            margin:20px 50px 20px 50px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script type="text/javascript">
+        var lineChartData = {
+            labels: ["99", "100", "101", "102", "103"], //顯示區間名稱
+            datasets: [{
+                label: '直升導向', // tootip 出現的名稱
+                lineTension: 0, // 曲線的彎度，設0 表示直線
+                backgroundColor: "#ea464d",
+                borderColor: "#ea464d",
+                borderWidth: 5,
+                data: [13, 7, 23, 14, 13], // 資料
+                fill: false, // 是否填滿色彩
+            }, {
+                label: '偏升學導向',
+                lineTension: 0,
+                fill: false,
+                backgroundColor: "#29b288",
+                borderColor: "#29b288",
+                borderWidth: 5,
+                data: [178, 154, 146, 159, 129],
+            },{
+                label: '就業導向',
+                lineTension: 0,
+                fill: false,
+                backgroundColor: "#000",
+                borderColor: "#000",
+                borderWidth: 5,
+                data: [409, 382, 316, 258, 279],
+            },{
+                label: '他校碩',
+                lineTension: 0,
+                fill: false,
+                backgroundColor: "#004080",
+                borderColor: "#004080",
+                borderWidth: 5,
+                data: [2, 8, 30, 82, 62],
+            },]
+        };
+        function drawLineCanvas(ctx,data) {
+            window.myLine = new Chart(ctx, {  //先建立一個 chart
+                type: 'line', // 型態
+                data: data,
+                options: {
+                        responsive: true,
+                        legend: { //是否要顯示圖示
+                            display: true,
+                        },
+                        tooltips: { //是否要顯示 tooltip
+                            enabled: true
+                        },
+                        scales: {  //是否要顯示 x、y 軸
+                            xAxes: [{
+                                scaleLabel:{
+                                display: true,
+                                labelString:"year",
+                                fontSize: 16
+                                },
+                                
+                            }],
+                            yAxes: [{
+                                scaleLabel:{
+                                display: true,
+                                labelString:"number",
+                                fontSize: 16
+                                },
+                            }]
+                        },
+                    }
+            });
+        };
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            drawLineCanvas(ctx,lineChartData);
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="pic.html">分析圖表</a>
+            <ul>
+                <li><a href="sa1.html">學術導向總覽</a></li>
+                <li><a href="sa2.html">特徵識別</a></li>
+                <li><a href="sa3.html">預測分佈比較</a></li>
+                <li><a href="sa4.html">潛在博士班學生</a></li>
+            </ul></li>
+            <li><a href="course.html">課程資訊</a></li>
+            <li><a href="decision.html">決策建議</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="pic.html">歷年趨勢圖</a></li>
+                <li><a href="prepic.html">職涯預測分布</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+                <center><h2>學生職涯發展趨勢圖</h2></center>
+                <div class="pic">          
+                    <canvas id="canvas" width="60" height="30"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        body {
+            font-family: 微軟正黑體;
+            background-color:#e0e0e0;
+            max-width: 1200px;
+            margin:auto;
+        }
+
+        .header{
+            width:100%;
+            height:200px;
+            //background-color: #CBA6C3;
+            background-image: url("background.jpg");
+            background-size:100%;
+            margin:auto;
+            text-align:center;
+            line-height:200px;
+        }
+        .wrapper{
+            width:100%;
+            margin:auto;
+            display:flex;
+            
+        }
+        .item{
+            width:20%;
+            margain-left:100px;
+        }
+        .item1{
+            width:960px;
+            //margin-left:20px;
+            //text-align:center;
+            background-color:#fff;
+            margin:5px 0px 5px 50px;
+            line-height:30px;
+        }
+        .items{
+            width:80%;
+            //margin-left:50px;
+            //text-align:center;
+            background-color:#fff;
+            margin:5px 0px 5px 0px;
+            line-height:30px;
+        }
+        .footer{
+            width:100%;
+            height:50px;
+            margin:auto;
+            background-color: #353866;
+            text-align:center;
+            line-height:50px;
+            color:#fff;
+            padding-top:0;
+        }
+        .nav{
+            width:100%;
+            margin:auto;
+            background-color: #353866;
+            display:flex;
+        }
+        .flex-nav{
+            padding:0;
+            margin:0;
+            list-style: none; 
+            position:relative;
+            display:flex;
+        }
+        .flex-nav a{
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+            display: block; /* 讓 <a> 填滿 <li> */
+            padding: 10px;
+        }
+        .flex-nav a:hover{
+            background-color: rgb(115, 115, 115);
+        }
+        .flex-nav ul{
+            position:absolute;
+            top:100%;
+            display: none;
+            background: #353866;
+            list-style: none;
+            padding:0;
+        }
+        .flex-nav li:hover ul{
+            display: block;
+        }
+        .list{
+            //margin-top:100px;
+            background-color:#fff;
+            list-style: none;
+            line-height:50px;
+            //border-top: 1px solid #333;
+            margin:5px 5px 5px 5px;
+            border-width:3px;
+            border-style:dashed;
+            border-color:#c0c0c0;
+            padding:40px 5px 40px 5px;
+            
+        }
+        .list li{
+            line-height: 2rem;
+            border-bottom: 1px solid #333;
+            font-size:14px
+        }
+        .list a{
+            text-decoration: none;
+            color: #534847;
+            display: block;
+            text-indent: 10px;
+            letter-spacing: 0.1rem;
+        }
+        table{
+            margin-bottom:20px;
+        }
+        .con{
+            margin:20px 50px 20px 50px;
+        }
+        h1{
+            color:#fff;
+            //-webkit-text-stroke: 1px black;
+            text-shadow:
+            2px 2px 0 #000,
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="recommend.html">推薦課程</a></li>
+            <li><a href="#">其他相關資訊</a>
+            <ul>
+                <li><a href="job.html">就業</a></li>
+                <li><a href="channel.html">碩士班相關</a></li>
+                <li><a href="channel2.html">博士班相關</a></li>
+                <li><a href="advisory.html">職涯諮詢</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="job.html">畢業出路</a></li>
+                <li><a href="job2.html">就業博覽會</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">         
+                <h2>畢業後你可以做甚麼?</h2>
+                <h3>專案管理</h3>
+                <table class="t">
+                    <tr>
+                        <td width="100px">
+                        軟體相關管理師
+                        </td>
+                        <td>
+                        從事軟體設計及規劃，並掌握軟體開發流程(SDLC)，以及負責溝通協調等專案管理工作。
+                        </td>
+                    </tr>
+                </table>
+                <h3>軟體工程</h3>
+                <table class="t">
+                    <tr>
+                        <td width="100px">
+                        軟體工程師
+                        </td>
+                        <td>
+                        從事電腦軟體程式設計、修改、安裝及維護。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100px">
+                        軟體工程師
+                        </td>
+                        <td>
+                        從事電腦軟體程式設計、修改、安裝及維護。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100px">
+                        韌體工程師
+                        </td>
+                        <td>
+                        撰寫各種微控制器韌體程式，執行韌體產品開發流程，檢測韌體產品與硬體及軟體工程師溝通配合，提供開發所需要的軟韌體支援。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100px">
+                        軟體工程師
+                        </td>
+                        <td>
+                        負責軟體系統之開發與程式設計，並進行系統測試。研發有線或無線網路通訊產品的軟體或韌體，設計高頻通訊，並進行測試驗證，分析資訊以確認電腦的規格、配置和周邊設備，並提出適當的調整建議。
+                        </td>
+                    </tr>
+                </table>
+
+                <h3>半導體元件</h3>
+                <table class="t">
+                    <tr>
+                        <td width="100px">
+                        半導體工程師
+                        </td>
+                        <td>
+                        研究半導體元件，從事設計、製作、測試、改良等工作。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100px">
+                        IC佈局工程師
+                        </td>
+                        <td>
+                        繪製IC設計的電路線圖，並測試電路圖的可行性
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100px">
+                        奈米研發工程師
+                        </td>
+                        <td>
+                        從事奈米材料科技的研究、開發、設計、驗證等工作
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100px">
+                        軟體工程師
+                        </td>
+                        <td>
+                        負責軟體系統之開發與程式設計，並進行系統測試。研發有線或無線網路通訊產品的軟體或韌體，設計高頻通訊，並進行測試驗證，分析資訊以確認電腦的規格、配置和周邊設備，並提出適當的調整建議。
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

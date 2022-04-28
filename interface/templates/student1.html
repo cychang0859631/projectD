@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .con{
+            display:flex;
+        }
+        .con1{
+            width:500px;
+        }
+        .t {
+            border: 1px solid #333;
+            width:400px;
+            margin-top:20px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:center;
+            height:50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">職涯探索</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">
+                <div class="con1">
+                    <form method="post" action={{ url_for('student') }}>
+                        <h2>職涯探索</h2>
+                        <p>請輸入您的基本資料，我們會依據您的基本特徵來提供適合您的職涯協助!</p>
+                        <h3>微積分相關課程學業成績</h3>
+                        第1學期微積分會考成績<input type="text" name="cal_1" value="0"><br>
+                        第2學期微積分會考成績<input type="text" name="cal_2" value="0"><br>
+                        第2學年微積分相關課程修課學分<input type="text" name="cal_credit_2" value="0"><br>
+                        第2學年微積分相關課程平均<input type="text" name="cal_mean_2" value="0"><br>
+                        第3學年微積分相關課程修課學分<input type="text" name="cal_credit_3" value="0"><br>
+                        第3學年微積分相關課程平均<input type="text" name="cal_mean_3" value="0"><br>
+                        第4學年微積分相關課程修課學分<input type="text" name="cal_credit_4" value="0"><br>
+                        第4學年微積分相關課程平均<input type="text" name="cal_mean_4" value="0"><br>
+                        <hr>
+                        <div class="enter">
+                            <input type = "submit">
+                        </div>  
+                    </form>
+                </div>
+                <div class="con1">
+                    <h2>微積分相關課程</h2>
+                    <table class="t">
+                        <tr>
+                            <th>哈哈</th>
+                            <th>哈哈</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>電機工程學系</td>
+                            <td>工程數學</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>電機工程學系</td>
+                            <td>工程數學</td>
+                        </tr>
+                        <tr>
+                            <td>電機工程學系</td>
+                            <td>工程數學</td>
+                        </tr>
+                    </table>
+                    <h3>填表說明</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo iure rem fugiat harum accusamus ullam doloribus hic soluta voluptate? Illum mollitia quae, explicabo voluptatem assumenda in eos harum quidem ad quam dolore quis sequi, eligendi eum doloribus fugiat provident minus? Omnis rem possimus asperiores perspiciatis quas doloremque aliquam dolorum eligendi!</p>
+                </div>
+                
+            </div>
+        <div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

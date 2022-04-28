@@ -1,0 +1,79 @@
+{% extends "student.html" %}
+{% block head %}
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .con{
+            display:flex;
+        }
+        .con1{
+            width:500px;
+        }
+        .t {
+            border: 1px solid #333;
+            width:600px;
+            margin-top:20px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:center;
+            height:50px;
+            
+        }
+    </style>
+{% endblock %}
+{% block main %} 
+                <div class="con1">
+                    <form method="post" action={{ url_for('student1') }}>
+                        <h2>職涯探索</h2>
+                        <br>                        
+                        <h3>填表說明</h3>
+                        <p>請依據右側的微積分相關課程以及修課學年來填寫下列資料，eg.在第二學年修習該課程填入第二學年微積分相關課程成績。若是沒有修課記錄則填入0</p>
+                        <br>
+                        <h3>微積分相關課程學業成績</h3>
+                        第1學期微積分會考成績<input type="text" name="cal_1" value="0"><br>
+                        第2學期微積分會考成績<input type="text" name="cal_2" value="0"><br>
+                        第2學年微積分相關課程修課學分<input type="text" name="cal_credit_2" value="0"><br>
+                        第2學年微積分相關課程平均<input type="text" name="cal_mean_2" value="0"><br>
+                        第3學年微積分相關課程修課學分<input type="text" name="cal_credit_3" value="0"><br>
+                        第3學年微積分相關課程平均<input type="text" name="cal_mean_3" value="0"><br>
+                        第4學年微積分相關課程修課學分<input type="text" name="cal_credit_4" value="0"><br>
+                        第4學年微積分相關課程平均<input type="text" name="cal_mean_4" value="0"><br>
+                        <hr>
+                        <div class="enter">
+                            <input type = "submit">
+                        </div>  
+                    </form>
+                    
+                </div>
+                <div class="con1">
+                    <h2>微積分相關課程</h2>
+                    <table class="t">
+                        <tr>
+                            <th>課號</th>
+                            <th>課名</th>
+                        </tr>
+                        {% for item in data %}
+                        <tr>
+                            <td>{{item[0]}}</td>
+                            <td>{{item[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+{% endblock %}

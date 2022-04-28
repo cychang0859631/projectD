@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        
+        table{
+            margin-bottom:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:20px 40px 20px 40px;
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:left;
+        }
+        .con a{
+            display:inline-block;
+            margin-top:10px;
+            margin-bottom:10px;
+            padding:10px 20px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">           
+                <p>請選擇分析方式</p>
+                <a href="teacher.html">入學管道</a>
+                <a href="teacher2.html">學院</a> 
+                <form method="post" action={{ url_for('student') }}>
+                    <p>請選擇學院</p>
+                    <select name="col">
+                        <option value="BT">生物科技學院</option>
+                    　  <option value="CS">資訊學院</option>
+                        <option value="E">工學院</option>
+                        <option value="EE">電機學院</option>
+                    　  <option value="ES">理學院</option>
+                        <option value="M">管理學院</option>
+                        <option value="SS">人文社會學院</option>
+                    </select>
+                    <p>請選擇學生入學年</p>
+                    <select name="year">
+                        <option value="105">105</option>
+                    　  <option value="106">106</option>
+                    </select>
+                    <div class="enter">
+                        <a href="pic.html">確認</a>
+                    </div>  
+                </form>
+            </div>
+        <div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

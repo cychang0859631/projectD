@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_css.css') }}">
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">  
+                <form method="post" action={{ url_for('student') }}>
+                    <p>請輸入您的基本資料</p>
+                    性別
+                    <select name="sex">
+                        <option value="1">男</option>
+                    　  <option value="2">女</option>
+                    </select><br>
+                    入學管道
+                    <select name="ac">
+                        <option value="0">考試入學</option>
+                    　  <option value="1">個人申請</option>
+                        <option value="2">繁星入學</option>
+                    </select><br>
+                    學院
+                    <select name="col">
+                        <option value="6">電機學院</option>
+                        <option value="3">生物科技學院</option>
+                    　  <option value="5">資訊學院</option>
+                        <option value="1">工學院</option>
+                    　  <option value="2">理學院</option>
+                        <option value="4">管理學院</option>
+                        <option value="0">人文社會學院</option>
+                    </select><br>
+                    學測數學成績<input type="text" name="mathscore" value="0"><br>
+                    第1學期微積分會考成績<input type="text" name="cal_1" value="0"><br>
+                    第2學期微積分會考成績<input type="text" name="cal_2" value="0"><br>
+                    第1學年實得學分率<input type="text" name="ecr_1" value="0"><br>
+                    第1學年非微積分相關課程修課學分<input type="text" name="noncal_credit_1" value="0"><br>
+                    第1學年非微積分相關課程平均<input type="text" name="noncal_mean_1" value="0"><br>
+                    第2學年實得學分率<input type="text" name="ecr_2" value="0"><br>
+                    第2學年微積分相關課程修課學分<input type="text" name="cal_credit_2" value="0"><br>
+                    第2學年微積分相關課程平均<input type="text" name="cal_mean_2" value="0"><br>
+                    第2學年非微積分相關課程修課學分<input type="text" name="noncal_credit_2" value="0"><br>
+                    第2學年非微積分相關課程平均<input type="text" name="noncal_mean_2" value="0"><br>
+                    第3學年實得學分率<input type="text" name="ecr_3" value="0"><br>
+                    第3學年微積分相關課程修課學分<input type="text" name="cal_credit_3" value="0"><br>
+                    第3學年微積分相關課程平均<input type="text" name="cal_mean_3" value="0"><br>
+                    第3學年非微積分相關課程修課學分<input type="text" name="noncal_credit_3" value="0"><br>
+                    第3學年非微積分相關課程平均<input type="text" name="noncal_mean_3" value="0"><br>
+                    第4學年實得學分率<input type="text" name="ecr_4" value="0"><br>
+                    第4學年微積分相關課程修課學分<input type="text" name="cal_credit_4" value="0"><br>
+                    第4學年微積分相關課程平均<input type="text" name="cal_mean_4" value="0"><br>
+                    第4學年非微積分相關課程修課學分<input type="text" name="noncal_credit_4" value="0"><br>
+                    第4學年非微積分相關課程平均<input type="text" name="noncal_mean_4" value="0"><br>
+                    畢業分數<input type="text" name="gpa" value="0"><br>
+                    <div class="enter">
+                        <input type = "submit">
+                    </div>  
+                </form>
+                
+            </div>
+        <div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

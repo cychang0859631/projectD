@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter{
+            margin-top:60px;
+            text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">職涯探索</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item1">
+            <div class="con">           
+                <form method="post" action={{ url_for('student') }}>
+                    <h2>職涯探索</h2>
+                    <p>請輸入您的基本資料，我們會依據您的基本特徵來提供適合您的職涯協助!</p>
+                    <h3>非微積分相關課程學業成績</h3>
+                    第1學年非微積分相關課程修課學分<input type="text" name="noncal_credit_1" value="0"><br>
+                    第1學年非微積分相關課程平均<input type="text" name="noncal_mean_1" value="0"><br>
+                    第2學年非微積分相關課程修課學分<input type="text" name="noncal_credit_2" value="0"><br>
+                    第2學年非微積分相關課程平均<input type="text" name="noncal_mean_2" value="0"><br>
+                    第3學年非微積分相關課程修課學分<input type="text" name="noncal_credit_3" value="0"><br>
+                    第3學年非微積分相關課程平均<input type="text" name="noncal_mean_3" value="0"><br>
+                    第4學年非微積分相關課程修課學分<input type="text" name="noncal_credit_4" value="0"><br>
+                    第4學年非微積分相關課程平均<input type="text" name="noncal_mean_4" value="0"><br>
+                    <hr>
+                    <h3>整體學業成績</h3>
+                    第1學年實得學分率<input type="text" name="ecr_1" value="0"><br>
+                    第2學年實得學分率<input type="text" name="ecr_2" value="0"><br>
+                    第3學年實得學分率<input type="text" name="ecr_3" value="0"><br>
+                    第4學年實得學分率<input type="text" name="ecr_4" value="0"><br>
+                    畢業分數<input type="text" name="gpa" value="0"><br>
+                    <div class="enter">
+                        <input type = "submit">
+                    </div>  
+                </form>
+                
+            </div>
+        <div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

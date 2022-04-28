@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+        .con{
+            //display:flex;
+            //flex-wrap:wrap;
+        }
+        .items{
+            //height:900px;
+        }
+        .box{
+            width:245px;
+            height:245px;
+            background-color:#ffffff;
+            //margin:20px 20px 20px 20px;
+            border:1px solid;
+            border-color:#c0c0c0;
+        }
+        .bbox{
+            margin:20px 10px 20px 10px;
+            
+        }
+        .bbox a{
+            color:#000000;
+            text-decoration: none;  /* 移除超連結底線 */
+            text-align:center;
+        }
+        .boxtext{
+            padding-top:115px;
+        }
+        .thide{
+            display:none;
+        }
+        .mouse{
+            cursor: pointer;
+        }
+        ul {margin-left: 0; padding-left: 20px;}
+    </style>
+    <script>
+        function toggleMenu(){
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("thide");
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">推薦課程</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="job_interview.html">探索結果說明</a></li>
+                <li><a href="job_interview2.html">學術領域介紹</a></li>
+                <li><a href="job_interview3.html">研究所推薦</a></li>
+                <li><a href="job_interview3.html">升學管道</a></li>
+                <li><a href="job_interview3.html">課程推薦</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+                <h2>電機相關領域</h2>
+                <h3>領域介紹</h3>
+                <p>學習有關電子設備、機器及系統的規劃、設計、發展、維護及
+監督的，包含與通訊有關的電腦及設備的設計。相關課程及資
+格包含：廣播電子、通訊系統、通訊設備安裝、通訊設備維護 、
+電腦工程等。
+</p>
+                <h3>研究方向</h3>
+                <ul>
+                    <li>奈米電子與積體電路
+                        <ul>
+                            <li>奈米電子</li>
+                            <li>量子與奈米光電元件</li>
+                            <li>VLSI及系統晶片</li>
+                            <li>積體電路設計電子設計自動化</li>
+                        </ul></li>
+                    <li>智慧系統/生醫</li>
+                    <li>通訊</li>
+                    <li>光電與顯示</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

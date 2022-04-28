@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <style>
+        h3{
+            margin-top:20px;
+        }
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+            width:500px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            text-align:center;
+            
+        }
+        .content1{
+            margin-top:20px;
+        }
+        .content1 li{
+            padding:5px 0px 5px 0px;
+        }
+        .enter{
+            //margin-top:60px;
+            //text-align:center;
+        }
+        .enter a{
+            padding:10px 30px;
+            background-color:#353866;
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script type="text/javascript">
+        var lineChartData = {
+            labels: ["1年以下", "1~3年", "3~5年", "5~7年", "7年以上"], //顯示區間名稱
+            datasets: [{
+                label: '大學', // tootip 出現的名稱
+                lineTension: 0, // 曲線的彎度，設0 表示直線
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                borderWidth: 1,
+                data: [35979, 37750, 42148, 46025, 52893], // 資料
+                fill: false, // 是否填滿色彩
+            }, {
+                label: '碩士',
+                lineTension: 0,
+                fill: false,
+                backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                borderColor: 'rgb(255, 159, 64)',
+                borderWidth: 1,
+                data: [40632, 43522, 48907, 55147, 59262],
+            },{
+                label: '博士',
+                lineTension: 0,
+                fill: false,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgb(75, 192, 192)',
+                borderWidth: 1,
+                data: [46893, 48597, 54004, 64344, 68858],
+            },]
+        };
+        function drawLineCanvas(ctx,data) {
+            window.myLine = new Chart(ctx, {  //先建立一個 chart
+                type: 'bar', // 型態
+                data: data,
+                options: {
+                        responsive: true,
+                        legend: { //是否要顯示圖示
+                            display: true,
+                        },
+                        tooltips: { //是否要顯示 tooltip
+                            enabled: true
+                        },
+                        scales: {  //是否要顯示 x、y 軸
+                            xAxes: [{
+                                scaleLabel:{
+                                display: true,
+                                labelString:"year",
+                                fontSize: 16
+                                },
+                                
+                            }],
+                            yAxes: [{
+                                scaleLabel:{
+                                display: true,
+                                labelString:"ntw",
+                                fontSize: 16
+                                },
+                            }]
+                        },
+                    }
+            });
+        };
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            drawLineCanvas(ctx,lineChartData);
+        };
+
+        function populate(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            s2.innerHTML = "";
+            if(s1.value == "ee"){
+                var optionArray = ["|","camaro|光電工程學系","corvette|電機工程學系","corvette|電子工程學系"];
+            } else if(s1.value == "cs"){
+                var optionArray = ["|","avenger|電腦硬體","challenger|軟體工程","charger|系統規劃"];
+            } else if(s1.value == "e"){
+                var optionArray = ["|","mustang|土木工程","shelby|化學材料"];
+            }
+            for(var option in optionArray){
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+        function test(s1,s2){
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            s2.innerHTML = "";
+            if(s1.value == "camaro"){
+                var optionArray = ["|","dog|通訊工程師","cat|光電工程師"];
+            } else if(s1.value == "corvette"){
+                var optionArray = ["|","triger|半導體工程師","mouse|IC設計工程師"];
+            } else if(s1.value == "impala"){
+                var optionArray = ["|","mustang|Mustang","shelby|Shelby"];
+            }
+            for(var option in optionArray){
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="student.html">推薦課程</a></li>
+            <li><a href="#">就業相關</a>
+            <ul>
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_interview.html">面試須知</a></li>
+                <li><a href="job_other.html">其他資訊</a></li>
+            </ul>
+            </li>
+            <li><a href="#">升學相關</a>
+            <ul>
+                <li><a href="graduate.html">學術探索</a></li>
+                <li><a href="graduate_channel.html">升學管道</a></li>
+            </ul>
+            </li>
+            <li><a href="advisory.html">職涯諮詢</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="job_col.html">職業探索</a></li>
+                <li><a href="job_salary.html">薪資落點</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">
+                <form method="post">
+                    <h2>查詢在各領域相關職業的薪資</h2>
+                    選擇學院:
+                    <select id="slct1" name="slct1" onchange="populate(this.id,'slct2')">
+                        <option value=""></option>
+                        <option value="ee">電機學院</option>
+                        <option value="cs">資訊學院</option>
+                        <option value="e">工學院</option>
+                    </select>
+                    <br>
+                    選擇學系:
+                    <select id="slct2" name="slct2" onchange="test('slct2','slct3')"></select>
+                    <br>
+                    選擇職業:
+                    <select id="slct3" name="slct3"></select>
+                    <br>
+                    <input type = "submit">
+                </form>
+                <hr>
+                <br>
+                <h2>光電工程師</h2>
+                <h3>定義</h3>
+                <p>進行光電系統和元件的研究、設計、製作、測試、改善</p>
+                <br>
+                <center><h2>行業平均薪資</h2></center>
+                <div class="pic">          
+                    <canvas id="canvas" width="60" height="30"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

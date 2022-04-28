@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="my_css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        body {
+                font-family: 微軟正黑體;
+                background-color:#e0e0e0;
+                max-width: 1200px;
+                margin:auto;
+            }
+        .pic{
+            margin:50px;
+        }
+        .flex-nav a{
+            color:#fff;
+            text-decoration: none;  /* 移除超連結底線 */
+            display: block; /* 讓 <a> 填滿 <li> */
+            padding: 10px;
+        }
+        .con1{
+            margin:100px 50px 0px 0px;
+            padding-left:0px;
+        }
+        .item{
+            width:50%;
+            background-color:#fff;
+            margin:0px 0px 5px 0px;
+        }
+        .items{
+            width:50%;
+            background-color:#fff;
+            margin:0px 0px 5px 0px;
+        }
+        .items p{
+            margin:0px;
+        }
+        .itemt{
+            width:50%;
+            background-color:#fff;
+            margin:5px 0px 0px 0px;
+            padding:50px 0px 0px 100px;
+        }
+        .itemtr{
+            width:50%;
+            background-color:#fff;
+            margin:5px 0px 0px 0px;
+            //padding:50px 0px 0px 100px;
+        }
+        //.itemtr p{
+            //padding-top:70px;
+        //}
+        .itemt h2{
+            font-weight:bold;
+        }
+        h3{
+            color:#0000a0;
+            font-weight:bold;
+        }
+        .con2{
+            margin:20px 0px 10px 100px;
+        }
+        .pic1{
+            margin:70px 150px 0px 150px;
+            text-align:center;
+            
+        }
+        .pic1 p{
+            display:inline;
+        }
+        .pic1-flex{
+            display:flex;
+        }
+        .gr{
+            float:left;
+        }
+        .wk{
+            float:right;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script type="text/javascript">
+        var lineChartData = {
+            labels: ["直升導向", "偏升學導向", "就業導向", "他校碩"], //顯示區間名稱
+            datasets: [{
+                label: '預測分布圖',
+                data: [65, 59, 80, 81],
+                backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                
+                ],
+                borderWidth: 1
+            }]
+        };
+        function drawLineCanvas(ctx,data) {
+            window.myLine = new Chart(ctx, {  //先建立一個 chart
+                type: 'bar', // 型態
+                data: data,
+                options: {
+                        responsive: true,
+                        legend: { //是否要顯示圖示
+                            display: true,
+                        },
+                        tooltips: { //是否要顯示 tooltip
+                            enabled: true
+                        },
+                        scales: {  //是否要顯示 x、y 軸
+                            xAxes: [{
+                                scaleLabel:{
+                                display: true,
+                                labelString:"year",
+                                fontSize: 16
+                                },
+                                
+                            }],
+                            yAxes: [{
+                                scaleLabel:{
+                                display: true,
+                                labelString:"number",
+                                fontSize: 16
+                                },
+                            }]
+                        },
+                    }
+            });
+        };
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            drawLineCanvas(ctx,lineChartData);
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="pic.html">分析圖表</a>
+            <ul>
+                <li><a href="sa1.html">學術導向總覽</a></li>
+                <li><a href="sa2.html">特徵識別</a></li>
+                <li><a href="sa3.html">預測分佈比較</a></li>
+                <li><a href="sa4.html">潛在博士班學生</a></li>
+            </ul></li>
+            <li><a href="course.html">課程資訊</a></li>
+            <li><a href="decision.html">決策建議</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="itemt">
+            <h2>電機學院學生職涯預測</h2>
+            <span style="font-size:20px; color:#808080;">
+            <p>點選職涯預測類來展示主要識別特徵</p></span> 
+        </div>
+        <div class="itemtr">
+            <div class="pic1">
+                <p>目前媒體訊息指數</p>
+                <span style="color:#0000a0;font-weight:bold;">
+                <p>0.47</p></span>
+                <div class="gr">    
+                    <img src="graduate.png" height="50" width="50">
+                </div>
+                <div class="wk">    
+                    <img src="work.png" height="50" width="50">
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 47%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 53%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <div class="con2">
+                <h3>[Academi Track] 主要特徵</h3>
+                <p>SocialMedia Index <= 0.41</p>
+                <span style="font-weight:bold; font-size:18px;">
+                <p>#入學特徵</p>
+                </span>
+                <p>-高中GPA>13(GPAm)<br>-入學管道 = 個人申請</p>
+                <span style="font-weight:bold; font-size:18px;">
+                <p>#大一</p>
+                </span>
+                <p>-NA</p>
+                <span style="font-weight:bold; font-size:18px;">
+                    <p>#大二</p>
+                </span>
+                <p>-學分獲得率>0.875 (ERC2)<br>-非數學相關課程平均成績>87.17 (NCRC2)</p>
+                
+                <span style="font-weight:bold; font-size:18px;">
+                <p>#大三</p>
+                </span>
+                <p>-學分獲得率>0.92 (ERC3)</p>
+                <span style="font-weight:bold; font-size:18px;">
+                <p>#大四</p>
+                </span>
+                <p>-87.17<畢業總成績<=87.75 (GPAu)</p>
+                
+            </div>
+        </div>
+        <div class="items">
+            <div class="con1">
+                <div class="pic">
+                    <span style="color:#0000a0;font-weight:bold;font-size:20px;"><p>Academic Track</p>
+                    </span>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 3%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">3%</div>
+                    </div>
+                </div>
+                <div class="pic">
+                    <p>Advance education (current university)</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 39%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">39%</div>
+                    </div>
+                </div>
+                <div class="pic">
+                    <p>Advance education (outside)</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 17%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">17%</div>
+                    </div>
+                </div>
+                <div class="pic">
+                <p>Vocational Track</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 39%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">39%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>

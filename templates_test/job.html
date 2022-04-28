@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_css.css') }}">
+    <style>
+        .t {
+            border: 1px solid #333;
+            margin:10px 0px 10px 0px;
+            width:760px;
+        }
+        .t th{
+            border: 1px solid #333; 
+        }
+        .t td{
+            border: 1px solid #333;
+            //text-align:left;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>大學生適性化學習系統</h1>
+    </div>
+    <div class="nav">
+        <ul class="flex-nav">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="recommend.html">推薦課程</a></li>
+            <li><a href="#">其他相關資訊</a>
+            <ul>
+                <li><a href="job.html">就業</a></li>
+                <li><a href="channel.html">碩士班相關</a></li>
+                <li><a href="channel2.html">博士班相關</a></li>
+                <li><a href="advisory.html">職涯諮詢</a></li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <div class="item">
+            <ul class="list">
+                <li><a href="job.html">畢業出路</a></li>
+                <li><a href="job2.html">就業博覽會</a></li>
+            </ul>
+        </div>
+        <div class="items">
+            <div class="con">        
+                <h2>畢業後你可以做甚麼?</h2>
+                {% for i in subtitle %}
+                <h3>{{i[0]}}</h3>
+                <table class="t">
+                    {% for j in data %}
+                        {% if j[3] == i[0] %}
+                        <tr>
+                            <td width="100px">{{j[1]}}</td><td>{{j[2]}}</td>
+                        </tr>
+                        {% endif %}
+                    {% endfor %}
+                </table>
+                {% endfor %}
+                <!--
+                <h3>專案管理</h3>
+                <table class="t">
+                    {% for item in data %}
+                    <tr>
+                        <td width="100px">{{item[1]}}</td><td>{{item[2]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                
+                <h3>軟體工程</h3>
+                <table class="t">
+                    {% for item in data1 %}
+                    <tr>
+                        <td width="100px">{{item[1]}}</td><td>{{item[2]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+                <h3>半導體元件</h3>
+                <table class="t">
+                    {% for item in data2 %}
+                    <tr>
+                        <td width="100px">{{item[1]}}</td><td>{{item[2]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                -->
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2021 NCTU_IED</p>
+    </div>
+    
+</body>
+</html>
